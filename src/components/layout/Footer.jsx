@@ -1,4 +1,4 @@
-import { Eye, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible.jsx'
 
@@ -91,8 +91,12 @@ const Footer = () => {
               className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
               aria-label="Centeye - Home"
             >
-              <div className="w-5 h-5 bg-primary flex items-center justify-center rounded-sm hover-icon-bounce">
-                <Eye className="h-3 w-3 text-primary-foreground" />
+              <div className="w-5 h-5 hover-icon-bounce">
+                <img 
+                  src="/src/assets/centeye-monogram.svg" 
+                  alt="Centeye" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-bold">Centeye</span>
             </a>
@@ -138,6 +142,27 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground/70">
               Powered by Hard Work and Experience
             </p>
+            <p className="text-xs text-muted-foreground/50 mt-2">
+              Concept design by{' '}
+              <a 
+                href="https://studiodrewskii.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-muted-foreground underline"
+              >
+                STUDIO DREWSKII
+              </a>
+              {' '}— All credits to{' '}
+              <a 
+                href="https://www.centeye.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-muted-foreground underline"
+              >
+                Centeye
+              </a>
+              {' '}for their amazing product.
+            </p>
           </div>
         </div>
 
@@ -150,8 +175,12 @@ const Footer = () => {
               className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
               aria-label="Centeye - Home"
             >
-              <div className="w-5 h-5 bg-primary flex items-center justify-center rounded-sm hover-icon-bounce">
-                <Eye className="h-3 w-3 text-primary-foreground" />
+              <div className="w-5 h-5 hover-icon-bounce">
+                <img 
+                  src="/src/assets/centeye-monogram.svg" 
+                  alt="Centeye" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-bold">Centeye</span>
             </a>
@@ -163,6 +192,27 @@ const Footer = () => {
             </p>
             <p className="text-xs text-muted-foreground/70">
               Powered by Hard Work and Experience
+            </p>
+            <p className="text-xs text-muted-foreground/50 mt-2">
+              Concept design by{' '}
+              <a 
+                href="https://studiodrewskii.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-muted-foreground underline"
+              >
+                STUDIO DREWSKII
+              </a>
+              {' '}— All credits to{' '}
+              <a 
+                href="https://www.centeye.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-muted-foreground underline"
+              >
+                Centeye
+              </a>
+              {' '}for their amazing product.
             </p>
           </div>
 

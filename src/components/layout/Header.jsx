@@ -1,6 +1,6 @@
 import { useState, useId } from 'react'
 import { Button } from '@/components/ui/button.jsx'
-import { Eye, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './ThemeToggle.jsx'
 
 const Header = () => {
@@ -28,8 +28,12 @@ const Header = () => {
             className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
             aria-label="Centeye - Home"
           >
-            <div className="w-7 h-7 bg-primary flex items-center justify-center hover-icon-bounce">
-              <Eye className="h-4 w-4 text-primary-foreground" />
+            <div className="w-7 h-7 hover-icon-bounce">
+              <img 
+                src="/src/assets/centeye-monogram.svg" 
+                alt="Centeye" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="text-xl font-bold tracking-tight">Centeye</span>
           </a>
