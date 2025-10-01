@@ -33,8 +33,8 @@ This redesign transforms Centeye's web presence from their current amateur desig
 
 ## Technical Stack
 
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript for type safety
+- **Framework**: React 19 with Vite
+- **Language**: JavaScript with modern ES6+ features
 - **Styling**: Tailwind CSS with custom theme
 - **Icons**: Lucide React for professional iconography
 - **Components**: shadcn/ui for consistent design system
@@ -49,26 +49,26 @@ This redesign transforms Centeye's web presence from their current amateur desig
 ### Installation
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/BigManDrewskii/centeye-concept-studio-drewskii.git
 cd centeye-redesign
 
-# Install dependencies
-npm install
+# Install dependencies (using pnpm as specified in package.json)
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 ```
 
 ### Development
 ```bash
 # Start development server with host access
-npm run dev -- --host
+pnpm dev -- --host
 
 # Build for production
-npm run build
+pnpm build
 
 # Preview production build
-npm run preview
+pnpm preview
 ```
 
 ## Color System
@@ -126,15 +126,32 @@ The redesign maintains all verified content from the original Centeye website wh
 
 ## Deployment
 
-The project is configured for deployment on modern hosting platforms:
+### Netlify Deployment
 
+The project is optimized for Netlify deployment with automatic builds from GitHub:
+
+#### Netlify Configuration
+- **Build Command**: `pnpm build`
+- **Publish Directory**: `dist`
+- **Node Version**: 18
+- **PNPM Version**: 8
+
+#### Deployment Steps
+1. **Automatic Deployment**: Connected to GitHub repository for automatic deployments
+2. **Build Settings**: Configured in `netlify.toml`
+3. **SPA Support**: Includes redirect rules for single-page application routing
+
+#### Manual Deployment
 ```bash
 # Build production version
-npm run build
+pnpm build
 
-# Deploy to hosting platform
-# (Follow platform-specific deployment instructions)
+# Deploy dist folder to Netlify (drag & drop or CLI)
+npx netlify-cli deploy --prod --dir=dist
 ```
+
+#### Environment Variables
+No environment variables required for basic deployment.
 
 ## Browser Support
 
