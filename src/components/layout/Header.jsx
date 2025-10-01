@@ -28,14 +28,13 @@ const Header = () => {
             className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
             aria-label="Centeye - Home"
           >
-            <div className="w-7 h-7 hover-icon-bounce">
+            <div className="h-7 w-auto hover-icon-bounce">
               <img 
-                src="/src/assets/centeye-monogram.svg" 
+                src="/src/assets/centeye-full-logo.svg" 
                 alt="Centeye" 
-                className="w-full h-full object-contain"
+                className="h-full w-auto object-contain invert dark:invert-0"
               />
             </div>
-            <span className="text-xl font-bold tracking-tight">Centeye</span>
           </a>
 
           {/* Desktop Navigation */}

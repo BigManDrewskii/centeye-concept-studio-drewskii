@@ -91,14 +91,13 @@ const Footer = () => {
               className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
               aria-label="Centeye - Home"
             >
-              <div className="w-5 h-5 hover-icon-bounce">
+              <div className="h-5 w-auto hover-icon-bounce">
                 <img 
-                  src="/src/assets/centeye-monogram.svg" 
+                  src="/src/assets/centeye-full-logo.svg" 
                   alt="Centeye" 
-                  className="w-full h-full object-contain"
+                  className="h-full w-auto object-contain invert dark:invert-0"
                 />
               </div>
-              <span className="font-bold">Centeye</span>
             </a>
             <p className="text-sm text-muted-foreground">
               World leader in ultra-low mass vision systems for robotics and drones
@@ -175,14 +174,13 @@ const Footer = () => {
               className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
               aria-label="Centeye - Home"
             >
-              <div className="w-5 h-5 hover-icon-bounce">
+              <div className="h-5 w-auto hover-icon-bounce">
                 <img 
-                  src="/src/assets/centeye-monogram.svg" 
+                  src="/src/assets/centeye-full-logo.svg" 
                   alt="Centeye" 
-                  className="w-full h-full object-contain"
+                  className="h-full w-auto object-contain invert dark:invert-0"
                 />
               </div>
-              <span className="font-bold">Centeye</span>
             </a>
             <p className="text-sm text-muted-foreground">
               World leader in ultra-low mass vision systems for robotics and drones
