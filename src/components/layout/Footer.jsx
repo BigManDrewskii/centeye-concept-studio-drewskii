@@ -93,7 +93,7 @@ const Footer = () => {
             >
               <div className="h-5 w-auto hover-icon-bounce">
                 <img 
-                  src="/src/assets/centeye-full-logo.svg" 
+                  src="/centeye-full-logo.svg" 
                   alt="Centeye" 
                   className="h-full w-auto object-contain invert dark:invert-0"
                 />
@@ -176,7 +176,7 @@ const Footer = () => {
             >
               <div className="h-5 w-auto hover-icon-bounce">
                 <img 
-                  src="/src/assets/centeye-full-logo.svg" 
+                  src="/centeye-full-logo.svg" 
                   alt="Centeye" 
                   className="h-full w-auto object-contain invert dark:invert-0"
                 />

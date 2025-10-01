@@ -30,7 +30,7 @@ const Header = () => {
           >
             <div className="h-7 w-auto hover-icon-bounce">
               <img 
-                src="/src/assets/centeye-full-logo.svg" 
+                src="/centeye-full-logo.svg" 
                 alt="Centeye" 
                 className="h-full w-auto object-contain invert dark:invert-0"
               />
