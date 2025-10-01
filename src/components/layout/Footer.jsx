@@ -57,9 +57,9 @@ const Footer = () => {
 
   return (
     <footer className="section-border relative overflow-hidden">
-      {/* UnicornStudio Background - Dark Mode Only */}
+      {/* UnicornStudio Background - Dark Mode Only on Desktop/Tablet */}
       <div 
-        className="absolute inset-0 w-full h-full pointer-events-none hidden dark:flex"
+        className="absolute inset-0 w-full h-full pointer-events-none hidden md:dark:flex"
         style={{ 
           justifyContent: 'center', 
           alignItems: 'center',
