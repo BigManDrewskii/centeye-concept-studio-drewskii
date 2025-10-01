@@ -45,14 +45,14 @@ const ApplicationsSection = () => {
           <div className={`max-w-2xl mx-auto ${isVisible ? 'animate-section animate-delay-2' : ''}`}>
             <div className="relative aspect-[3/2] overflow-hidden">
               {/* Light theme image */}
-              <img 
-                src="/src/assets/img-banner-drone-light.png"
+              <img
+                src="/img-banner-drone-light.png"
                 alt="Drone navigation technology visualization"
                 className="w-full h-full object-cover dark:hidden"
               />
               {/* Dark theme image */}
               <img 
-                src="/src/assets/img-banner-drone-dark.png"
+                src="/img-banner-drone-dark.png"
                 alt="Drone navigation technology visualization"
                 className="w-full h-full object-cover hidden dark:block"
               />

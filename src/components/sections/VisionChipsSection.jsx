@@ -37,8 +37,8 @@ const VisionChipsSection = () => {
 
           <div className={`max-w-3xl mx-auto ${isVisible ? 'animate-section animate-delay-2' : ''}`}>
             <div className="relative">
-              <img 
-                src="/src/assets/size-comparison.png"
+              <img
+                src="/size-comparison.png"
                 alt="Vision chip size comparison"
                 className="w-full h-auto"
               />

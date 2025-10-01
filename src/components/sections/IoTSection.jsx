@@ -56,14 +56,14 @@ const IoTSection = () => {
           <div className={`max-w-2xl mx-auto ${isVisible ? 'animate-section animate-delay-2' : ''}`}>
             <div className="relative aspect-[3/2] overflow-hidden">
               {/* Light theme image */}
-              <img 
-                src="/src/assets/internet-of-things-banner-light.png"
+              <img
+                src="/internet-of-things-banner-light.png"
                 alt="IoT environmental monitoring visualization"
                 className="w-full h-full object-cover dark:hidden"
               />
               {/* Dark theme image */}
               <img 
-                src="/src/assets/internet-of-things-banner-dark.png"
+                src="/internet-of-things-banner-dark.png"
                 alt="IoT environmental monitoring visualization"
                 className="w-full h-full object-cover hidden dark:block"
               />
