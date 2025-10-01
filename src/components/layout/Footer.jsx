@@ -1,5 +1,6 @@
-import { Eye } from 'lucide-react'
-import { useEffect } from 'react'
+import { Eye, ChevronDown } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible.jsx'
 
 const Footer = () => {
   useEffect(() => {
@@ -81,7 +82,67 @@ const Footer = () => {
       {/* Footer Content */}
       <div className="section-content relative z-10">
         <div className="max-w-4xl mx-auto px-6">
-        <div className="grid md:grid-cols-5 gap-6">
+        {/* Mobile Layout - Compact with Dropdowns */}
+        <div className="md:hidden">
+          {/* Brand Section */}
+          <div className="space-y-4 mb-6">
+            <a 
+              href="/" 
+              className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm hover-scale"
+              aria-label="Centeye - Home"
+            >
+              <div className="w-5 h-5 bg-primary flex items-center justify-center rounded-sm hover-icon-bounce">
+                <Eye className="h-3 w-3 text-primary-foreground" />
+              </div>
+              <span className="font-bold">Centeye</span>
+            </a>
+            <p className="text-sm text-muted-foreground">
+              World leader in ultra-low mass vision systems for robotics and drones
+            </p>
+          </div>
+
+          {/* Collapsible Navigation Sections */}
+          <div className="space-y-2">
+            {footerSections.map((section) => (
+              <Collapsible key={section.title}>
+                <CollapsibleTrigger className="flex items-center justify-between w-full py-3 px-1 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
+                  <h4 className="text-sm font-semibold">{section.title}</h4>
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200 data-[state=open]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden">
+                  <nav className="pb-3 pl-1">
+                    <ul className="space-y-2">
+                      {section.links.map((link) => (
+                        <li key={link.name}>
+                          <a 
+                            href={link.href} 
+                            className="block text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm touch-action-manipulation hover-subtle-bg px-1 py-2"
+                            style={{ minHeight: '32px' }}
+                          >
+                            {link.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </CollapsibleContent>
+              </Collapsible>
+            ))}
+          </div>
+
+          {/* Mobile Footer Info */}
+          <div className="mt-6 pt-4 border-t border-border/50 space-y-1">
+            <p className="text-xs text-muted-foreground/70">
+              Copyright © 2025 CENTEYE
+            </p>
+            <p className="text-xs text-muted-foreground/70">
+              Powered by Hard Work and Experience
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Original Grid */}
+        <div className="hidden md:grid md:grid-cols-5 gap-6">
           {/* Brand Section */}
           <div className="space-y-3">
             <a 

@@ -19,7 +19,7 @@ const Header = () => {
   }
 
   return (
-    <header className="section-border">
+    <header className="section-border relative">
       <div className="section-content">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
@@ -65,7 +65,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden h-8 w-8 p-0 touch-action-manipulation"
+              className="md:hidden h-8 w-8 p-0 touch-action-manipulation relative z-50"
               style={{ minHeight: '44px', minWidth: '44px' }}
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
@@ -76,29 +76,51 @@ const Header = () => {
             </Button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
+      {/* Mobile Navigation Overlay */}
+      {isMenuOpen && (
+        <button 
+          type="button"
+          className="md:hidden fixed inset-0 z-40 bg-background/80 backdrop-blur-sm border-0 p-0 cursor-default"
+          onClick={() => setIsMenuOpen(false)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              setIsMenuOpen(false)
+            }
+          }}
+          aria-label="Close menu"
+        >
           <div 
             id={mobileMenuId}
-            className="md:hidden py-4 border-t border-border mt-4"
+            className="absolute top-[72px] left-0 right-0 mx-4 mt-2 bg-background border border-border rounded-lg shadow-lg animate-in slide-in-from-top-2 duration-200"
+            onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-label="Navigation menu"
           >
-            <nav className="space-y-1">
-              {navigationItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm touch-action-manipulation hover-subtle-bg"
-                  style={{ minHeight: '44px' }}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+            <nav className="p-4">
+              <div className="space-y-1">
+                {navigationItems.map((item, index) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all duration-200 rounded-md touch-action-manipulation"
+                    style={{ 
+                      minHeight: '44px',
+                      animationDelay: `${index * 50}ms`,
+                      animationFillMode: 'both'
+                    }}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
             </nav>
           </div>
-        )}
-      </div>
+        </button>
+      )}
     </header>
   )
 }
